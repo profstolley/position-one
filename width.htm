@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>CSS Positioning One: Width<title>
+	<title>CSS Positioning One: Width</title>
 	
 	<link rel="stylesheet" type="text/css" media="screen, print" href="css/reset.css" />
 	<link rel="stylesheet" type="text/css" media="screen, print" href="css/base.css" />
@@ -15,7 +15,85 @@
 </head>
 <body>
 <div id="page">
-	
+	<h1>Understanding the basics of widths in CSS</h1>
+	<div class="containing-element-example">
+		<h2>Default Widths</h2>
+		<p>
+			By default, all block-level elements are as wide as their
+			containing element that has a specified width. If no
+			containing element has a specified width, than the element
+			is as wide as the browser window. See this in action by
+			putting the following CSS into the Web Developer Add-on's
+			CSS editor:
+		</p>
+<pre>div.containing-element-example {
+  background-color: red; 
+}</pre>
+		<p>
+			Nifty. Now, change the containing element on the page
+			(<code>div#page</code>) to be 800 pixels wide:
+		</p>
+<pre>div#page {
+  width: 800px;
+}</pre>
+		<p>
+			This box should now appear 800 pixels wide, because it is
+			filling the entire 800 pixels of the containing
+			<code>div#page</code> element.
+		</p>
+	</div>
+	<div class="specified-width-example">
+		<h2>Specified Widths</h2>
+		<p>
+			Widths can be specified in two basic ways. The first is to
+			have what amounts to an automatic width, by specifying left
+			and/or right margins. Try sizing this area of the page by
+			putting the following CSS into the Web Developer Add-on's
+			CSS editor:
+		</p>
+<pre>div.specified-width-example {
+  background-color: green;
+  margin-right: 200px;
+  margin-left: 300px;
+}</pre>
+		<p>
+			Alternatively, you can specify a width using the
+			<code>width</code> property. Remove the CSS you wrote above,
+			and try setting this area of the page to be 300 pixels wide:
+		</p>
+<pre>div.specified-width-example {
+  background-color: green;
+  width: 300px;
+}</pre>
+	</div>
+	<div class="border-padding-example">
+		<h2>Borders, Padding, and Widths</h2>
+		<p>
+			So far, so good. However, widths get a little more complicated when you start adding in borders and padding. <strong>Borders and padding are added to the widths of elements that have a specified width.</strong> Try, for example,
+		</p>
+<pre>div.border-padding-example {
+  background-color: blue;
+  width: 300px;
+}</pre>
+		<p>
+			Then, to that add <code>padding: 50px;</code>. Then add <code>border: 50px solid black;</code>. You'll end up with this box being 500 pixels wide: 300px width + 100px padding (50px/each right and left) + 100px border (50px/each right and left) = 500px.
+		</p>
+	</div>
+	<div class="absolute-width-example">
+		<h2>Absolute Positioning and Widths</h2>
+		<p>Absolutely positioned elements shrink to the width of content.</p>
+		<p>See for yourself:</p>
+<pre>div.absolute-width-example {
+  background-color: yellow;
+  position: absolute;
+}</pre>
+		<p>Not the right size? Specify <code>width</code>:</p>
+<pre>div.absolute-width-example {
+  background-color: yellow;
+  position: absolute;
+  width: 500px;
+}</pre>
+  </div>
 </div>
 </body>
 </html>
