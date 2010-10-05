@@ -1,5 +1,20 @@
 /* screen.css: Screen Styles */
+div#header,
+div#footer {
+  background-color: black;
+  color: white;
+  padding: 50px;
+}
+div#content { background-color: #DDD; }
+ul#navigation {
+  background-color: red;
+}
+ul#navigation a {
+  color: white;
+  text-decoration: none;
+}
 ul.accessibility {
   position: absolute;
   left: -20000px;
 }
+
