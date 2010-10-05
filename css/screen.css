@@ -1,9 +1,11 @@
 /* screen.css: Screen Styles */
 div#page {
+  padding-top: 1px;
   width: 960px;
   margin: 0px auto;
   position: relative;
 }
+div#header { margin-top: 99px; }
 div#header,
 div#footer {
   background-color: black;
@@ -18,7 +20,7 @@ ul#navigation a {
   display: block;
   color: white;
   text-decoration: none;
-  padding-left: 50px;
+  text-align: center;
 }
 ul#navigation a:hover {
   background-color: black;
@@ -29,12 +31,13 @@ ul.accessibility {
 }
 ul#navigation {
   position: absolute;
-  width: 200px;
-  top: 185px;
-  right: 0px;
+  top: 0px;
+  left: 0px;
 }
-
+ul#navigation li { 
+  width: 240px; 
+  float: left;
+}
 div#content {
-  margin-right: 250px;
 }
 
