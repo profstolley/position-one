@@ -1,1 +1,5 @@
 /* screen.css: Screen Styles */
+ul.accessibility {
+  position: absolute;
+  left: -20000px;
+}
