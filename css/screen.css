@@ -1,4 +1,9 @@
 /* screen.css: Screen Styles */
+div#page {
+  width: 960px;
+  margin: 0px auto;
+  position: relative;
+}
 div#header,
 div#footer {
   background-color: black;
